@@ -17,6 +17,11 @@ describe('User entity unit tests', () => {
     expect(typeof sut.props.name).toBe('string');
   });
 
+  it('Setter of prop name', () => {
+    sut['name'] = 'other name';
+    expect(sut.props.name).toBe('other name');
+  });
+
   it('Getter of prop email', () => {
     expect(sut.props.email).toBeDefined();
     expect(sut.props.email).toEqual(props.email);
@@ -27,6 +32,11 @@ describe('User entity unit tests', () => {
     expect(sut.props.password).toBeDefined();
     expect(sut.props.password).toEqual(props.password);
     expect(typeof sut.props.password).toBe('string');
+  });
+
+  it('Setter of prop password', () => {
+    sut['password'] = 'other password';
+    expect(sut.props.password).toBe('other password');
   });
 
   it('Getter of prop createdAt', () => {
