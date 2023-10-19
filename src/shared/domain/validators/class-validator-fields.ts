@@ -17,7 +17,7 @@ export abstract class ClassValidatorFields<PropsValidated>
 
       errors.map((error) => {
         const field = error.property;
-        this.errors[field] = Object.assign(error.constraints);
+        this.errors[field] = Object.values(error.constraints);
       });
     } else {
       this.validatedData = data;
